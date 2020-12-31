@@ -23,6 +23,7 @@ if [ string compare $host_va \"null\" ] {
 send \"\s $host_va\n\"
 set timeout 3
 expect \"\*\:\~\$\*\"
+send \"\ export HISTIGNORE=* && history -c \n\"
 } 
 interact
 "
